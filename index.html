@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Layout for Job Task</title>
+</head>
+
+<body>
+
+    <header class="bg-[#4BBA7D] py-5 min-h-[60px] relative">
+
+        <span id="circle" class="w-20 h-20 absolute rounded-full bg-red-600 p-4 left-5 md:left-36"></span>
+
+    </header>
+
+    <main id="main" class="mx-5 md:mx-36 mt-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 h-full">
+            <div class="md:col-span-3 bg-blue-400 h-[470px]"></div>
+            <div class="col-span-1">
+                <div class="grid gap-y-5 h-[470px]">
+                    <div class="bg-violet-500 h-full"></div>
+                    <div class="bg-violet-500 h-full"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bg-[#4BBA7D] py-10 mt-10">
+
+        </div>
+
+    </main>
+
+
+    <script>
+        const circle = document.getElementById("circle");
+        const codes = ['a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        let count = 1;
+        circle.addEventListener("click", () => {
+            if (count % 9 === 0) {
+                circle.style.backgroundColor = "#000"
+
+            }
+            else {
+                let colorcode = "#";
+                for (let i = 0; i < 6; i++) {
+                    const num = Math.round(Math.random() * 15);
+
+                    colorcode += codes[num];
+
+                }
+                circle.style.backgroundColor = colorcode;
+
+            }
+            count++;
+        })
+    </script>
+</body>
+
+</html>
