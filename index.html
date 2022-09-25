@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 
     <title>Layout for Job Task</title>
@@ -15,26 +14,26 @@
 
 <body>
 
-    <header class="bg-[#4BBA7D] py-5 min-h-[60px] relative">
+    <header class="header bg-green">
 
-        <span id="circle" class="w-20 h-20 absolute rounded-full bg-red-600 p-4 left-5 md:left-36"></span>
+        <span id="circle"></span>
 
     </header>
 
-    <main id="main" class="mx-5 md:mx-36 mt-20">
+    <main id="main">
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 h-full">
-            <div class="md:col-span-3 bg-blue-400 h-[470px]"></div>
-            <div class="col-span-1">
-                <div class="grid gap-y-5 h-[470px]">
-                    <div class="bg-violet-500 h-full"></div>
-                    <div class="bg-violet-500 h-full"></div>
+        <div class="layout">
+            <div class="content"></div>
+            <div class="sidepanel">
+                <div class="rows">
+                    <div class="sidebar-box"></div>
+                    <div class="sidebar-box"></div>
                 </div>
             </div>
 
         </div>
 
-        <div class="bg-[#4BBA7D] py-10 mt-10">
+        <div class="content-footer bg-green">
 
         </div>
 
